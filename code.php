@@ -146,7 +146,9 @@
             // Something went wrong. Rollback
             $link->rollback();
             $_SESSION['message'] = "ERROR: Could not able to execute $sql. " . mysqli_error($link);
-            header('Refresh: 1; URL=index.php');
+            // header('Refresh: 1; URL=index.php');
+            "<script>
+window.location = 'index.php';</script>";
         }
 
 
